@@ -88,4 +88,5 @@ def get_lines(path: str) -> Iterator[str]:
     for i in delete_list[::-1]:
         lines.pop(i)  # finally, delete the comment lines
 
-    return lines
+    for line in lines:
+        yield line
